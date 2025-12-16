@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
-/* -----------------------------
-   THEME VARIABLES
------------------------------- */
+
 :root {
   --color-bg: 249 250 251;
   --color-text: 17 24 39;
@@ -21,9 +19,6 @@
   --color-border: 55 65 81;
 }
 
-/* -----------------------------
-   BASE STYLES
------------------------------- */
 html {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -67,9 +62,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* -----------------------------
-   COMPONENTS
------------------------------- */
+
 
 /* Buttons */
 .btn {
@@ -174,9 +167,6 @@ a:hover {
   color: #000;
 }
 
-/* -----------------------------
-   UTILITIES
------------------------------- */
 .text-muted {
   color: #4b5563;
 }

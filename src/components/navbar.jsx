@@ -1,7 +1,9 @@
 export function Navbar() {
   return (
     <>
-      <div className="bg-var[--(primary-color)]"></div>
+      <div className="sticky top-0 bg-[rgb(var(--color-primary))] h-[50px]">
+        hello
+      </div>
     </>
   );
 }
