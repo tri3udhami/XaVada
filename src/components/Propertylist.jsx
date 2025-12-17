@@ -1,6 +1,5 @@
-import React from "react";
 import PropertyCard from "./PropertyCard";
-import bedroom from "../assets/bedroom.jpg";
+import bedroom from "../assets/hero-bedroom.jpg";
 import propertylist from "../assets/propertylist1.jpg";
 function PropertyList() {
   const properties = [
@@ -10,7 +9,7 @@ function PropertyList() {
       location: "Kathmandu",
       price: 25000,
       bedrooms: 2,
-      image: {bedroom},
+      image: { bedroom },
     },
     {
       id: 2,
@@ -18,7 +17,7 @@ function PropertyList() {
       location: "Lalitpur",
       price: 15000,
       bedrooms: 1,
-      image: {propertylist},
+      image: { propertylist },
     },
     {
       id: 3,
@@ -26,7 +25,7 @@ function PropertyList() {
       location: "Bhaktapur",
       price: 40000,
       bedrooms: 3,
-      image: {propertylist},
+      image: { propertylist },
     },
   ];
 
@@ -36,10 +35,7 @@ function PropertyList() {
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {properties.map((property) => (
-          <PropertyCard
-            key={property.id}
-            property={property}
-          />
+          <PropertyCard key={property.id} property={property} />
         ))}
       </div>
     </div>

@@ -1,6 +1,5 @@
-import React from "react";
-import bedroom from "../assets/bedroom.jpg";
-import searchicon from "../assets/search.jpg";
+import bedroom from "../assets/hero-bedroom.jpg";
+import Search from "../assets/Search.svg";
 
 function Hero() {
   return (
@@ -26,7 +25,7 @@ function Hero() {
             className="input"
           />
           <button className="btn btn-primary">
-            <img src={searchicon} alt="Search" />
+            <img src={Search} alt="Search" />
           </button>
         </div>
       </div>
