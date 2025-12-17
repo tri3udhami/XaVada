@@ -11,7 +11,7 @@ function PropertyList({ showAll = false }) {
       location: "Kathmandu",
       price: 25000,
       bedrooms: 2,
-      image: {bedroom},
+      image: { bedroom },
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ function PropertyList({ showAll = false }) {
       location: "Lalitpur",
       price: 15000,
       bedrooms: 1,
-      image: {propertylist},
+      image: { propertylist },
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ function PropertyList({ showAll = false }) {
       location: "Bhaktapur",
       price: 40000,
       bedrooms: 3,
-      image: {propertylist},
+      image: { propertylist },
     },
     // your property data
   ];
