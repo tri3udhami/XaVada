@@ -1,7 +1,9 @@
-import PropertyCard from "./PropertyCard";
-import bedroom from "../assets/hero-bedroom.jpg";
+ import PropertyCard from "./PropertyCard";
+import { Link } from "react-router-dom";
+import bedroom from "../assets/bedroom.jpg";
 import propertylist from "../assets/propertylist1.jpg";
-function PropertyList() {
+
+function PropertyList({ showAll = false }) {
   const properties = [
     {
       id: 1,
@@ -27,19 +29,37 @@ function PropertyList() {
       bedrooms: 3,
       image: { propertylist },
     },
+    // your property data
   ];
 
-  return (
-    <div className="container-page py-10">
-      <h2 className="mb-6">Available Rentals</h2>
+  const visibleProperties = showAll
+    ? properties
+    : properties.slice(0, 3); // show only 3 on home
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {properties.map((property) => (
+  return (
+    <div className="container-page">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {visibleProperties.map((property) => (
           <PropertyCard key={property.id} property={property} />
         ))}
       </div>
+
+      {/* SEE MORE BUTTON */}
+      {!showAll && (
+        <div className="flex justify-center mt-8">
+          <Link to="/Properties">
+            <button className="btn btn-outline px-8 py-3">
+              See More Properties →
+            </button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
 
 export default PropertyList;
+
+ 
+ 
+ 

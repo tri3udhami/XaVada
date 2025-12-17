@@ -1,14 +1,22 @@
+import { BrowserRouter,Route,Routes } from "react-router-dom";
 import "./App.css";
-import Hero from "./components/hero";
-import Navbar from "./components/navbar";
+import Homepage from "./components/Home";
 import PropertyList from "./components/Propertylist";
+import Navbar from "./components/Navbar";
+
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <PropertyList />
+    <Navbar />
+    <BrowserRouter>
+ <Routes>
+      <Route path="/" element={<Homepage />} />
+      <Route path="/Properties" element={<PropertyList showAll={true} />} />
+     </Routes>
+   
+    </BrowserRouter>
+    
     </>
   );
 }
