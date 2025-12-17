@@ -3,7 +3,8 @@ import PropertyList from "./Propertylist";
 
 function PropertyCard({ property }) {
   return (
-    <div className="card overflow-hidden">
+    <div>
+    <div className="card overflow-hidden my-12">
       {/* Image */}
       <img
         src={property.image}
@@ -34,7 +35,12 @@ function PropertyCard({ property }) {
           View Details
         </button>
       </div>
+     
     </div>
+    
+    
+    </div>
+    
   );
 }
 
