@@ -30,20 +30,28 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[rgb(var(--color-border))] bg-[rgb(var(--color-bg))]">
-      <nav className="container-page flex h-16 items-center justify-between">
+      <nav className="px-[1rem] mx-auto  flex h-16 items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2">XAVADA</div>
+        <div className="flex justify-center items-center gap-12">
+          <div className="flex logo items-center gap-2">XAVADA</div>
+          <button
+            onClick={toggleTheme}
+            className="btn btn-outline"
+            aria-label="Toggle theme"
+          >
+            <img
+              src={theme === "dark" ? logoDark : logoLight}
+              alt="theme"
+              className="h-4 w-auto"
+            />
+          </button>
+        </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center gap-6 text-sm font-medium">
+        <ul className="hidden md:flex items-center gap-12 text-sm font-medium">
           <li>
             <a href="#" className="hover:text-[rgb(var(--color-primary))]">
               Browse Listings
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-[rgb(var(--color-primary))]">
-              Agents
             </a>
           </li>
           <li>
@@ -58,20 +66,7 @@ export function Navbar() {
           </li>
         </ul>
 
-        {/* Actions */}
         <div className="hidden md:flex items-center gap-3">
-          <button
-            onClick={toggleTheme}
-            className="btn btn-outline"
-            aria-label="Toggle theme"
-          >
-            <img
-              src={theme === "dark" ? logoDark : logoLight}
-              alt="theme"
-              className="h-8 w-auto"
-            />
-          </button>
-
           <a href="#" className="btn btn-outline">
             Login
           </a>
